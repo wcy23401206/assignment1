@@ -10,6 +10,8 @@ def cleaning(input1,input2,output):
     merge_data.drop('id', axis=1, inplace=True)
     merge_data.to_csv(output, index=False)
 
+    file_shape = merge_data.shape
+    print("Output file shape:", file_shape)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
